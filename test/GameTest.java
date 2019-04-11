@@ -44,4 +44,16 @@ public class GameTest {
         }
         assertEquals(20, game.score());
     }
+
+    @Test
+    public void rollStrikeFollowedByOneAndOne_scoreReturns14() {
+        game.roll(10);
+        game.roll(1);
+        game.roll(1);
+
+        for (int i = 0; i < 17; i++) {
+            game.roll(0);
+        }
+        assertEquals(14, game.score());
+    }
 }
