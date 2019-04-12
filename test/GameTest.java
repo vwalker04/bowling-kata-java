@@ -56,4 +56,15 @@ public class GameTest {
         }
         assertEquals(14, game.score());
     }
+
+    @Test
+    public void perfectGame() {
+        int i = 0;
+        while (i < 12) {
+            game.roll(10);
+            i++;
+        }
+
+        assertEquals(300, game.score());
+    }
 }

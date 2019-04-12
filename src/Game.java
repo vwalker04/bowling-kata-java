@@ -11,10 +11,10 @@ class Game {
             if (scorePerRoll[roll] + scorePerRoll[roll + 1] == 10) {
                 score += 10 + scorePerRoll[roll + 2];
                 roll += 2;
-            } else if (scorePerRoll[roll] == 10){
+            } else if (scorePerRoll[roll] == 10) {
                 score += 10 + scorePerRoll[roll + 1] + scorePerRoll[roll + 2];
-                roll ++;
-            } else{
+                roll++;
+            } else {
                 score += scorePerRoll[roll] + scorePerRoll[roll + 1];
                 roll += 2;
             }
