@@ -11,7 +11,7 @@ class Game {
             if (isSpare(roll)) {
                 score += 10 + scorePerRoll[roll + 2];
                 roll += 2;
-            } else if (scorePerRoll[roll] == 10) {
+            } else if (isStrike(roll)) {
                 score += 10 + scorePerRoll[roll + 1] + scorePerRoll[roll + 2];
                 roll++;
             } else {
@@ -29,5 +29,9 @@ class Game {
 
     private boolean isSpare(int roll) {
         return scorePerRoll[roll] + scorePerRoll[roll + 1] == 10;
+    }
+
+    private boolean isStrike(int roll) {
+        return scorePerRoll[roll] == 10;
     }
 }

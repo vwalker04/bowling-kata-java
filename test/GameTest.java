@@ -78,4 +78,17 @@ public class GameTest {
 
         assertEquals(300, game.score());
     }
+
+    @Test
+    public void rollAll1PinLastFrame3Strikes_scoreReturns39() {
+        for (int i = 0; i < 9; i++) {
+            game.roll(1);
+            game.roll(0);
+        }
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+
+        assertEquals(39, game.score());
+    }
 }
