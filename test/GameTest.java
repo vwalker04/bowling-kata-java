@@ -46,6 +46,17 @@ public class GameTest {
     }
 
     @Test
+    public void roll10SparesAnd1pin_scoreReturns110() {
+        for (int i = 0; i < 10; i++) {
+            game.roll(1);
+            game.roll(9);
+        }
+        game.roll(1);
+
+        assertEquals(110, game.score());
+    }
+
+    @Test
     public void rollStrikeFollowedByOneAndOne_scoreReturns14() {
         game.roll(10);
         game.roll(1);

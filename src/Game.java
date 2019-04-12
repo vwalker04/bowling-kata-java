@@ -8,7 +8,7 @@ class Game {
         int score = 0;
 
         for (int frameIndex = 0, roll = 0; frameIndex < frame.length; frameIndex++) {
-            if (scorePerRoll[roll] + scorePerRoll[roll + 1] == 10) {
+            if (isSpare(roll)) {
                 score += 10 + scorePerRoll[roll + 2];
                 roll += 2;
             } else if (scorePerRoll[roll] == 10) {
@@ -25,5 +25,9 @@ class Game {
     void roll(int downedPins) {
         scorePerRoll[rollIndex] = downedPins;
         rollIndex++;
+    }
+
+    private boolean isSpare(int roll) {
+        return scorePerRoll[roll] + scorePerRoll[roll + 1] == 10;
     }
 }
