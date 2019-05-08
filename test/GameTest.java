@@ -19,11 +19,22 @@ public class GameTest {
 
     @Test
     public void rollCompleteGameOf1PinRolls_scoreReturns20() {
+        rollMultiple(1, 20);
+        assertEquals(20, game.score());
+    }
+
+    @Test
+    public void rollSpareWith5PinsNexTRoll_scoreReturns20() {
+        rollMultiple(5, 3);
+        rollMultiple(0, 17);
+        assertEquals(20, game.score());
+    }
+
+    private void rollMultiple(int pins, int rollCount) {
         int i = 0;
-        while (i < 20) {
-            game.roll(1);
+        while (i < rollCount) {
+            game.roll(pins);
             i++;
         }
-        assertEquals(20, game.score());
     }
 }
