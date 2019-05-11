@@ -1,9 +1,9 @@
-#Bowling Kata - TDD Practice
+# Bowling Kata - TDD Practice
 
 Credits
 Inspired by Uncle Bob
 
-###Bowling Rules
+### Bowling Rules
 
 The game consists of 10 frames. In each frame the player has two rolls to knock down 10 pins. The score for the frame is the total number of pins knocked down, plus bonuses for strikes and spares.
 
@@ -13,14 +13,14 @@ A strike is when the player knocks down all 10 pins on his first roll. The frame
 
 In the tenth frame a player who rolls a spare or strike is allowed to roll the extra balls to complete the frame. However no more than three balls can be rolled in tenth frame.
 
-###Requirements
+### Requirements
 
 Write a class Game that has two methods
 
 void roll(int) is called each time the player rolls a ball. The argument is the number of pins knocked down.
 int score() returns the total score for that game.
 
-###Follow up
+### Follow up
 
 Read this article “Engineer Notebook: An Extreme Programming Episode” by Robert C. Martin, where he describes solving this kata together with Robert S. Koss. Follow along in your editor. Does he do the kata the same way as you would? butunclebob.com/files/downloads/Bowling%20Game%20Kata.ppt
 
