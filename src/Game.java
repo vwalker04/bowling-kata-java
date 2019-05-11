@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 class Game {
     private int totalScore = 0;
-    ArrayList<Integer> rolls = new ArrayList<>();
-    int frames[] = new int[10];
+    private ArrayList<Integer> rolls = new ArrayList<>();
+    private int[] frames = new int[10];
 
     int score() {
         for (int rollIndex = 0, frameIndex = 0; frameIndex < frames.length; frameIndex++) {
