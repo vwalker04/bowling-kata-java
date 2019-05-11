@@ -17,12 +17,12 @@ In the tenth frame a player who rolls a spare or strike is allowed to roll the e
 
 Write a class Game that has two methods
 
-void roll(int) is called each time the player rolls a ball. The argument is the number of pins knocked down.
-int score() returns the total score for that game.
+```void roll(int)``` is called each time the player rolls a ball. The argument is the number of pins knocked down.
+```int score()``` returns the total score for that game.
 
 ### Follow up
 
 Read this article “Engineer Notebook: An Extreme Programming Episode” by Robert C. Martin, where he describes solving this kata together with Robert S. Koss. Follow along in your editor. Does he do the kata the same way as you would? butunclebob.com/files/downloads/Bowling%20Game%20Kata.ppt
 
-Information cited from http://kata-log.rocks/bowling-game-kata
+*Information cited from http://kata-log.rocks/bowling-game-kata*
 
