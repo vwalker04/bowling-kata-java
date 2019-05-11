@@ -31,6 +31,26 @@ public class GameTest {
         assertEquals(20, game.score());
     }
 
+    @Test
+    public void rollStrikeand1and1Pins_score14() {
+        game.roll(10);
+        rollMultiple(1, 2);
+        rollMultiple(0, 17);
+        assertEquals(14, game.score());
+    }
+
+    @Test
+    public void rollPerfectGame_score300() {
+        rollMultiple(10, 12);
+        assertEquals(300, game.score());
+    }
+
+    @Test
+    public void rollAllSparesAnd5Pins_score150() {
+        rollMultiple(5, 21);
+        assertEquals(150, game.score());
+    }
+
     private void rollMultiple(int pins, int rollCount) {
         int i = 0;
         while (i < rollCount) {
