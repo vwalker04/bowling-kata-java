@@ -1,14 +1,22 @@
 import java.util.ArrayList;
 
 class Game {
-    private int score = 0;
+    private int totalScore = 0;
     ArrayList<Integer> rolls = new ArrayList<>();
+    int frames[] = new int[10];
 
     int score() {
-        for(int i = 0; i < rolls.size(); i++) {
-            score += rolls.get(i);
+        int totalScore = 0;
+        for (int rollIndex = 0, frameIndex = 0; frameIndex < frames.length; frameIndex++) {
+            if (rolls.get(rollIndex) + rolls.get(rollIndex + 1) == 10) {
+                totalScore += 10 + rolls.get(rollIndex + 2);
+                rollIndex += 2;
+            } else {
+                totalScore += rolls.get(rollIndex) + rolls.get(rollIndex + 1);
+                rollIndex += 2;
+            }
         }
-        return score;
+        return totalScore;
     }
 
     void roll(int pinsDowned) {

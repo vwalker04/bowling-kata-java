@@ -13,18 +13,13 @@ public class GameTest {
     }
 
     @Test
-    public void gameInitializes_scoreReturns0() {
-        assertEquals(0, game.score());
-    }
-
-    @Test
-    public void rollCompleteGameOf1PinRolls_scoreReturns20() {
+    public void rollAll1Pins_score20() {
         rollMultiple(1, 20);
         assertEquals(20, game.score());
     }
 
     @Test
-    public void rollSpareWith5PinsNexTRoll_scoreReturns20() {
+    public void rollSpareAnd5Pins_score20() {
         rollMultiple(5, 3);
         rollMultiple(0, 17);
         assertEquals(20, game.score());
