@@ -13,6 +13,12 @@ public class GameTest {
     }
 
     @Test
+    public void rollGutterGame_score0() {
+        rollMultiple(0, 20);
+        assertEquals(0, game.score());
+    }
+
+    @Test
     public void rollAll1Pins_score20() {
         rollMultiple(1, 20);
         assertEquals(20, game.score());
